@@ -93,7 +93,7 @@ function textGenerate() {
 
 // show popup
 $('#yes').click(function() {
-    var audio = new Audio('sound/tick.mp3');
+    var audio = new Audio('tick.mp3');
     audio.play();
     Swal.fire({
         title: 'Nói cho tớ lí do cậu thích tớ đi :vvvv',
