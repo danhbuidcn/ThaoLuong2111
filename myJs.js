@@ -16,10 +16,10 @@ function firstQuestion(){
     Swal.fire({
         title: 'He luu cậu!',
         text: 'Tớ có điều này muốn hỏi cậu nhớ phải trả lời thật lòng nhaaa.',
-        imageUrl: 'img/cuteCat.jpg',
+        imageUrl: 'cuteCat.jpg',
         imageWidth: 300,
         imageHeight: 300,
-        background: '#fff url("img/iput-bg.jpg")',
+        background: '#fff url("iput-bg.jpg")',
         imageAlt: 'Custom image',
       }).then(function(){
         $('.content').show(200);
@@ -28,7 +28,7 @@ function firstQuestion(){
 
  // switch button position
  function switchButton() {
-    var audio = new Audio('sound/duck.mp3');
+    var audio = new Audio('duck.mp3');
     audio.play();
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
@@ -41,7 +41,7 @@ function firstQuestion(){
 }
 // move random button póition
 function moveButton() {
-    var audio = new Audio('sound/Swish1.mp3');
+    var audio = new Audio('Swish1.mp3');
     audio.play();
     if (screen.width<=600) {
         var x = Math.random() * 300;
@@ -73,7 +73,7 @@ $('#no').click(() => {
 // generate text in input
 function textGenerate() {
     var n = "";
-    var text = " Tại vì cậu đẹp trai vl :<<<<<<< ";
+    var text = " Tại vì tớ thích cậu :<<<<<<< ";
     var a = Array.from(text);
     var textVal = $('#txtReason').val() ? $('#txtReason').val() : "";
     var count = textVal.length;
@@ -101,10 +101,10 @@ $('#yes').click(function() {
         width: 900,
         padding: '3em',
         html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Whyyy'>",
-        background: '#fff url("img/iput-bg.jpg")',
+        background: '#fff url("iput-bg.jpg")',
         backdrop: `
               rgba(0,0,123,0.4)
-              url("img/giphy2.gif")
+              url("giphy2.gif")
               left top
               no-repeat
             `,
@@ -120,12 +120,12 @@ $('#yes').click(function() {
             Swal.fire({
                 width: 900,
                 confirmButtonText: 'Okiiiii lun <3',
-                background: '#fff url("img/iput-bg.jpg")',
-                title: 'Tớ biết mà ^^ Yêu cậu 300.000',
-                text: "Tối nay tớ qua đón cậu đi chơi nhaaaaaaaaa :v Còn giờ thì chờ gì nữa mà ko inbox cho tớ đi nàoooooo",
+                background: '#fff url("iput-bg.jpg")',
+                title: 'Tớ biết mà ^_^',
+                text: "Cậu còn ngại gì nữa Xoăn Xoăn, ib cho tớ đi nàooooo ......",
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
-                    window.location = 'http://fb.com';
+                    window.location = 'https://www.facebook.com/thuongbuivanhaui';
                   }
             })
         }
