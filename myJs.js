@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    // process bar
+    $('#myVideo').hide();
+
     setTimeout(function() {
         firstQuestion();
         $('.spinner').fadeOut();
@@ -10,12 +11,25 @@ $(document).ready(function() {
     }, 600);
 })
 
-function firstQuestion(){
+function playPause() { 
+    $('#myVideo').show();
+    $('.wrapper').hide();
+    if (myVideo.paused) 
+      myVideo.play();
     
+    setTimeout(function() {
+        boxChat();
+        $('.wrapper').show();
+        $('#myVideo').hide();
+    }, 215000);
+} 
+
+function firstQuestion(){
+
     $('.content').hide();
     Swal.fire({
-        title: 'He luu cậu!',
-        text: 'Tớ có điều này muốn hỏi cậu nhớ phải trả lời thật lòng nhaaa.',
+        title: 'He luu bé!',
+        text: 'Anh có điều này muốn nói với em...',
         imageUrl: 'cuteCat.jpg',
         imageWidth: 300,
         imageHeight: 300,
@@ -73,7 +87,7 @@ $('#no').click(() => {
 // generate text in input
 function textGenerate() {
     var n = "";
-    var text = " Tại vì tớ thích cậu :<<<<<<< ";
+    var text = " Em yêu anh nhiều lắm lắm luôn........... :<<<<<<< ";
     var a = Array.from(text);
     var textVal = $('#txtReason').val() ? $('#txtReason').val() : "";
     var count = textVal.length;
@@ -92,37 +106,29 @@ function textGenerate() {
 }
 
 // show popup
-$('#yes').click(function() {
-    var audio = new Audio('tick.mp3');
-    audio.play();
+function boxChat() {
     Swal.fire({
-        title: 'Nói cho tớ lí do cậu thích tớ đi :vvvv',
+        title: 'Gửi đến anh lời em muốn nói nhé :vvvv',
         html: true,
         width: 900,
         padding: '3em',
         html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Whyyy'>",
         background: '#fff url("iput-bg.jpg")',
-        backdrop: `
-              rgba(0,0,123,0.4)
-              url("giphy2.gif")
-              left top
-              no-repeat
-            `,
         showCancelButton: true,
-        cancelButtonText: "Thôi ngại lém :<<",
+        cancelButtonText: "Không thích đấy :<<",
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonColor: '#fe8a71',
         cancelButtonColor: '#f6cd61',
-        confirmButtonText: 'Gửi cho tớ <3'
+        confirmButtonText: 'Gửi cho Thượng <3'
     }).then((result) => {
         if (result.value) {
             Swal.fire({
                 width: 900,
                 confirmButtonText: 'Okiiiii lun <3',
                 background: '#fff url("iput-bg.jpg")',
-                title: 'Tớ biết mà ^_^',
-                text: "Cậu còn ngại gì nữa Xoăn Xoăn, ib cho tớ đi nàooooo ......",
+                title: 'Anh biết mà ^_^',
+                text: "Em còn ngại gì nữa, ib cho anh đi nàooooo ......",
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
                     window.location = 'https://www.facebook.com/thuongbuivanhaui';
@@ -130,4 +136,4 @@ $('#yes').click(function() {
             })
         }
     })
-})
+}

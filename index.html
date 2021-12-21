@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Crussssh</title>
+    <title>21-12</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,26 +15,32 @@
   <body>
     <div class="wrapper">
       <!-- Preloader -->
-    <div id="preloader">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
+      <div id="preloader">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
       </div>
-  </div>
       <div id="bg"></div>
       <div class="content">
         <header>
-          <h2>Cậu yêu tớ có phải không nào ._.</h2>
-          <h4>Nếu cậu ko trả lời mà thoát ra tức là muốn làm vợ tớ rùi đó nha :v </h4>
+          <h2>Hôm nay là ngày của hai đứa mình.</h2>
+          <h4>Cảm ơn em vì đã yêu anh .... <br/>
+          Anh không biết phải thể hiện tình cảm với em như thế nào .<br/>
+          Thôi thì hãy để bài hát này thay lời anh muốn nói nhé !</h4>
         </header>
-        <button id="yes" type="button" class="btn btn-danger btn-lg">Yêu ơi là yêuuuuuu <333 </button>
-        <button id="no" type="button" class="btn btn-info btn-lg">Cậu mơ à :333 </button>
+        <button id="yes" type="button" class="btn btn-danger btn-lg" onclick="playPause()">Nghe bài hát và ... <333 </button>
+        <button id="no" type="button" class="btn btn-info btn-lg">Em không nghe đấy. </button>
       </div>
     </div>
-    <audio src="sound.mp3" autoplay></audio>
+    <!-- video -->
+    <video id="myVideo">
+      <source src="Beautiful_In_White.mp4" type="video/mp4">
+    </video>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
